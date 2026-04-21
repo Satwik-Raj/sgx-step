@@ -86,15 +86,16 @@ static inline void do_write_cr4(unsigned long val)
  */
 static void enable_write_protection(void)
 {
-    unsigned long cr0, cr4;
+    unsigned long cr0;//, cr4;
 
     cr0 = native_read_cr0();
     set_bit(X86_CR0_WP_BIT, &cr0);
     do_write_cr0(cr0);
-
+/*
     cr4 = native_read_cr4();
     set_bit(X86_CR4_CET_BIT, &cr4);
     do_write_cr4(cr4);
+*/
 }
 
 /*
@@ -104,15 +105,16 @@ static void enable_write_protection(void)
  */
 static void disable_write_protection(void)
 {
-    unsigned long cr0, cr4;
-
+    unsigned long cr0;//, cr4;
+/*
     cr4 = native_read_cr4();
     clear_bit(X86_CR4_CET_BIT, &cr4);
     do_write_cr4(cr4);
-
+*/
     cr0 = native_read_cr0();
     clear_bit(X86_CR0_WP_BIT, &cr0);
     do_write_cr0(cr0);
+
 }
 
 /* ********************** DEVICE OPEN ******************************* */

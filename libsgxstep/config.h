@@ -47,7 +47,7 @@
 #endif
 
 #define VICTIM_CPU                  1
-#define NUM_CORES                   4
+#define NUM_CORES                   6
 #define SPY_CPU                     (NUM_CORES-1)
 
 /*
@@ -59,5 +59,7 @@
  *       tweaking and observing the NOP microbenchmark erip results.
  */
 #define SGX_STEP_TIMER_INTERVAL 32
+
+
 
 #endif

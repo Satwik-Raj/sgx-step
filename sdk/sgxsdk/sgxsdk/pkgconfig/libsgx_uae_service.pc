@@ -1,0 +1,10 @@
+prefix=/home/bunnyhop/sgx-step/sdk/sgxsdk/sgxsdk
+includedir=${prefix}/include
+libdir=${prefix}/lib64
+
+Name: libsgx_uae_service
+Description: SGX uAE service library
+Version: 2.23.100.2
+Cflags: -I${includedir}
+Libs: -L${libdir} -lsgx_uae_service
+Libs.private: -lsgx_urts
