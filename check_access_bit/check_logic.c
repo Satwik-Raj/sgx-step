@@ -24,7 +24,6 @@ int main()
     size_t page_size = getpagesize();
 
     char *page = mmap(NULL, page_size,
-		    B
                       PROT_READ | PROT_WRITE,
                       MAP_PRIVATE | MAP_ANONYMOUS,
                       -1, 0);

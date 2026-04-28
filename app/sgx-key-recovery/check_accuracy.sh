@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Number of runs
-RUNS=200
+RUNS=100
 length=128
 sum=0
 count=0
@@ -12,12 +12,9 @@ make &> /dev/null
 
 for ((i=1; i<=RUNS; i++)); do
     echo "Run $i"
-
     sleep 2
-
     # Run the program
     sudo ./app &> /dev/null
-
     # Read results.txt
     if [[ -f results.txt ]]; then
         rec_idx=$(sed -n '1p' results.txt)
